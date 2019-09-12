@@ -17,9 +17,14 @@ class CadOrdem extends Component {
         e.preventDefault()
         
         await api.post('/ordem', {
-            
+            equipamento: this.state.equipamento,
+            setor: this.state.setor,
+            data: this.state.data,
+            descricao: this.state.descricao,
+            solicitante: this.state.solicitante,        
         })
 
+        this.props.history.push("/")
     }
 
     handleChange = e => {

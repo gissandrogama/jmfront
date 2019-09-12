@@ -1,5 +1,5 @@
-import aixos from 'aixos'
+import axios from 'axios'
 
-const api = aixos.create({ baseURL: 'http://localhost:3333/jmapi'})
+const api = axios.create({ baseURL: 'http://localhost:3333'})
 
 export default api 
