@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import './Ordem.css'
+
 class Ordems extends Component {
     render(){
         return(

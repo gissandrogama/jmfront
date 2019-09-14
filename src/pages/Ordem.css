@@ -1,0 +1,23 @@
+#lista-ordem {
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto 0;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #ddd;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#list-ordem ul {
+    
+}
+
+#lista-ordem li {
+    height: 38px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding: 0 20px;
+    font-size: 14px;
+}
