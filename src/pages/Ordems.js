@@ -26,9 +26,9 @@ class Ordems extends Component {
             <table>           
                 <thead>
                     <tr>
-                        <th>Nome</th>
+                        <th>Equipamento</th>
                         <th>Data</th>
-                        <th>ações</th>
+                        <th>Detalhe</th>
                     </tr>
                 </thead>
                 { ordems.map( ordem => (
@@ -37,7 +37,6 @@ class Ordems extends Component {
                         <td>{ordem.equipamento}</td>
                         <td>{ordem.data}</td>
                         <td>
-                            <button>Atender</button>
                             <button>Visualizar</button>
                         </td>
                     </tr>
