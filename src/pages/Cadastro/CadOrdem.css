@@ -29,6 +29,25 @@ form#new-os input[type=text] {
     font-size: 14px;
 }
 
+form#new-os input[type=date] {
+    /* appearance: none;
+    -webkit-appearance: none;
+    color: #95a5a6;
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 18px;
+    border:1px solid #ecf0f1;
+    background:#ecf0f1;
+    padding:5px;
+    display: inline-block !important;
+    visibility: visible !important; */
+    height: 38px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #ccc
+}
+
 form#new-os button {
     padding: 10px 20px;
     border-radius: 4px;

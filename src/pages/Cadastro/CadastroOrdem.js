@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import api from '../services/api'
+import api from '../../services/api'
 
 import './CadOrdem.css'
 
@@ -49,8 +49,8 @@ class CadOrdem extends Component {
                     value={this.state.setor}
                 />
                 <input 
-                    type="text"
-                    name="data"
+                    type="date"
+                    name="date"
                     placeholder="data de cadastro da os"
                     onChange={this.handleChange}
                     value={this.state.data}

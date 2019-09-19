@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import api from '../services/api'
+import api from '../../services/api'
 
 import './Ordem.css'
 
@@ -33,7 +33,7 @@ class Ordems extends Component {
                 </thead>
                 { ordems.map( ordem => (
                 <tbody>
-                    <tr>
+                    <tr key={ordem._id}>
                         <td>{ordem.equipamento}</td>
                         <td>{ordem.data}</td>
                         <td>
