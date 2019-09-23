@@ -1,43 +1,46 @@
-table {
+#ordem {
     width: 100%;
     max-width: 700px;
     margin: 30px auto 0;
     padding: 30px;
     background: #fff;
-    border: 1px solid #ddd;  
- 
+    border: 1px solid #ddd;    
 }
 
-tbody {
-    border-collapse: collapse;    
+#ordem table {
     width: 100%;
-       
+    max-width: 700px;
 }
 
-thead th, td {
-    text-align: center;
-    padding: 8px;
+#ordem thead tr {
+    width: 100%;
 }
 
-tr:nth-child(even){background-color: #ffd1c6}
-
-thead th {
+#ordem thead th {
     background-color: #da552f;
     color: white;
     font-size: 14px;
+    text-align: center;
+    padding: 8px;
+    
 }
 
 
-/* #list-ordem ul li {
-    height: 38px;
-    margin: 5px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    padding: 10px 20px;
-    font-size: 14px;
-} */
+#ordem tbody {
+    border-collapse: collapse; 
+    width:  100%;    
+}
 
-tbody button {    
+#ordem tbody td {
+    font-size: 14px;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ddd; 
+}
+
+
+
+#ordem tbody button {    
     padding: 3px 10px;
     margin: 0 0 0 5px;
     border-radius: 4px;
@@ -49,7 +52,7 @@ tbody button {
     cursor: pointer;
 }
 
-tbody button:hover {
+#ordem tbody button:hover {
     background: #da552f;
     border: 1px solid #da552f;;
     color: #FFF;

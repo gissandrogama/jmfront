@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import api from '../services/api'
+import api from '../../services/api'
 
 import './CadOrdem.css'
 
@@ -15,7 +15,7 @@ class CadOrdem extends Component {
 
     handleSubmit = async e => {
         e.preventDefault()
-        
+                       
         await api.post('/ordem', {
             equipamento: this.state.equipamento,
             setor: this.state.setor,
@@ -49,9 +49,8 @@ class CadOrdem extends Component {
                     value={this.state.setor}
                 />
                 <input 
-                    type="text"
-                    name="data"
-                    placeholder="data de cadastro da os"
+                    type="date"
+                    name="data"                                     
                     onChange={this.handleChange}
                     value={this.state.data}
                 />
