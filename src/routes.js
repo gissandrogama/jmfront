@@ -10,7 +10,7 @@ function Routes(){
         <Switch>
             <Route path="/" exact component={Ordems}/>
             <Route path="/new" component={CadOrdem}/>
-            <Route path="/visualize" component={Visualize}/>
+            <Route path="/visualize/:id" component={Visualize}/>
         </Switch>
     )
 }

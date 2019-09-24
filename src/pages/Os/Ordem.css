@@ -43,7 +43,8 @@
 
 
 
-#ordem tbody a {    
+#ordem tbody a { 
+    text-decoration: none;   
     padding: 3px 10px;
     margin: 0 0 0 5px;
     border-radius: 4px;
@@ -52,7 +53,7 @@
     color: #da552f;
     font-size: 14px;
     font-weight: bold;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 #ordem tbody a:hover {
