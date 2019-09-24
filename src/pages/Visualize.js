@@ -18,7 +18,13 @@ export default class Visualize extends Component {
     render(){
         return(
             <div className="visual">
-                
+                <article>
+                    <label><strong>Equipamento: </strong></label>
+                    <p>Trator</p>
+                    <label><strong>Data de Abertura</strong></label>
+                    
+
+                </article>
             </div>
         )
     }
