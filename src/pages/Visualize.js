@@ -32,26 +32,40 @@ export default class Visualize extends Component {
         })
     }
 
+    handleSubmit = e => {
+        e.preventDefault()
+
+        console.log("teste")
+    }
+
+    handleChange = e => {
+        this.setState({ [e.targe.name]: e.targe.value })
+    }
+
     render() {
         return (
             <div className="visual">
                 <article>
                     <label><strong>Equipamento: </strong></label>
-                    <p>Trator</p>
+                    <p>{this.state.equipamento}</p>
+                    <label><strong>Setor: </strong></label>
+                    <p>{this.state.setor}</p>
                     <label><strong>Data de Abertura:</strong></label>
-                    <p>22/09/2019</p>
+                    <p>{this.state.data}</p>
                     <label><strong>Descrição:</strong></label>
-                    <p>Troca de caixa de marcha</p>
+                    <p>{this.state.descricao}</p>
                     <label><strong>Solicitante:</strong></label>
-                    <p>João</p>
-                    <form id="new_ordem">
+                    <p>{this.state.solicitante}</p>
+                    <form id="new_ordem" onSubmit={this.handleSubmit}>
                         <label><strong>Data de atendimento:</strong></label>
                         <input
                             type="date"
                             name="data_atend"
                             onChange={this.handleChange}
-                            value={this.state.url}
+                            value={this.state.data_atend}
                         />
+
+                        <button type="submit">Atender</button>
                     </form>
                 </article>
             </div>
