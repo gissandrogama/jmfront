@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+
 import api from '../../services/api'
 
 import './Ordem.css'
@@ -36,7 +38,7 @@ class Ordems extends Component {
                                 <td>{ordem.equipamento}</td>
                                 <td>{ordem.data}</td>
                                 <td>
-                                    <button>Visualizar</button>
+                                    <Link to={`/visualize/${ordem._id}`}>Visualizar</Link>
                                 </td>
                             </tr>
                     ))}
