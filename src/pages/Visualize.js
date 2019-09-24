@@ -10,8 +10,7 @@ export default class Visualize extends Component {
         setor: '',
         data: '',
         descricao: '',
-        solicitante: '',
-        data_atend: '',
+        solicitante: '',        
         status: '',
     }
 
@@ -26,8 +25,7 @@ export default class Visualize extends Component {
             setor: response.data.setor,
             data: response.data.data,
             descricao: response.data.descricao,
-            solicitante: response.data.solicitante,
-            data_atend: response.data.data_atend,
+            solicitante: response.data.solicitante,            
             status: response.data.status,
         })
     }
@@ -35,11 +33,19 @@ export default class Visualize extends Component {
     handleSubmit = e => {
         e.preventDefault()
 
-        console.log("teste")
+        console.log({
+            equipamento: this.state.equipamento,
+            setor: this.state.setor,
+            data: this.state.data,
+            descricao: this.state.descricao,
+            solicitante: this.state.solicitante,
+            data_atend: this.state.data_atend,
+            status: true,
+        })
     }
 
     handleChange = e => {
-        this.setState({ [e.targe.name]: e.targe.value })
+        this.setState({ [e.targe.data_atend]: e.targe.data_atend })
     }
 
     render() {
@@ -56,18 +62,18 @@ export default class Visualize extends Component {
                     <p>{this.state.descricao}</p>
                     <label><strong>Solicitante:</strong></label>
                     <p>{this.state.solicitante}</p>
-                    <form id="new_ordem" onSubmit={this.handleSubmit}>
-                        <label><strong>Data de atendimento:</strong></label>
-                        <input
-                            type="date"
-                            name="data_atend"
-                            onChange={this.handleChange}
-                            value={this.state.data_atend}
-                        />
-
-                        <button type="submit">Atender</button>
-                    </form>
                 </article>
+                <form id="new_ordem" onSubmit={this.handleSubmit}>
+                    <label><strong>Data de atendimento:</strong></label>
+                    <input
+                        type="date"
+                        name="data_atend"
+                        onChange={this.handleChange}
+                        value={this.state.data_atend}
+                    />
+
+                    <button type="submit">Atender</button>
+                </form>
             </div>
         )
     }
