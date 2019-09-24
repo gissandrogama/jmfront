@@ -8,15 +8,12 @@ class Ordems extends Component {
         ordems: [],
     }
 
-    componentDidMount() {
-        this.loadOrdems()
-    }
-
-    loadOrdems = async e => {
+    async componentDidMount() {
         
         const response = await api.get(`/ordems`)
-
+    
         this.setState({ ordems: response.data })
+        
     }
 
     render() {
