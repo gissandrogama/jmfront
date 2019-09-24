@@ -13,6 +13,7 @@ class Ordems extends Component {
     }
 
     loadOrdems = async e => {
+        
         const response = await api.get(`/ordems`)
 
         this.setState({ ordems: response.data })
@@ -32,8 +33,8 @@ class Ordems extends Component {
                             <th>Detalhe</th>
                         </tr>
                     </thead>
-                    {ordems.map(ordem => (
                         <tbody>
+                    {ordems.map(ordem => (
                             <tr key={ordem._id}>
                                 <td>{ordem.equipamento}</td>
                                 <td>{ordem.data}</td>
@@ -41,8 +42,8 @@ class Ordems extends Component {
                                     <button>Visualizar</button>
                                 </td>
                             </tr>
-                        </tbody>
                     ))}
+                        </tbody>
                 </table>
             </div>
         )

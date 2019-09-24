@@ -17,7 +17,9 @@ export default class Visualize extends Component {
     
     render(){
         return(
-            <h1>Viasualizar OS</h1>
+            <div >
+
+            </div>
         )
     }
 }
