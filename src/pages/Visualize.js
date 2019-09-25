@@ -5,13 +5,19 @@ import api from '../services/api'
 import './Visualize.css'
 
 export default class Visualize extends Component {
+    constructor(props) {
+        super(props);
+        this.input = React.createRef();
+    }
+
     state = {
         equipamento: '',
         setor: '',
         data: '',
         descricao: '',
-        solicitante: '',        
+        solicitante: '',
         status: '',
+        data_atend:'',
     }
 
     async componentDidMount() {
@@ -25,23 +31,27 @@ export default class Visualize extends Component {
             setor: response.data.setor,
             data: response.data.data,
             descricao: response.data.descricao,
-            solicitante: response.data.solicitante,            
+            solicitante: response.data.solicitante,
             status: response.data.status,
         })
     }
 
-    handleSubmit = e => {
+    handleSubmit = async e => {
         e.preventDefault()
 
-        console.log({
+        const {id} = this.props.match.params
+
+        await api.put(`/ordem/${id}`, {
             equipamento: this.state.equipamento,
             setor: this.state.setor,
             data: this.state.data,
             descricao: this.state.descricao,
             solicitante: this.state.solicitante,
-            data_atend: this.state.data_atend,
+            data_atend: this.input.current.value,
             status: true,
         })
+
+        this.props.history.push('/')
     }
 
     handleChange = e => {
@@ -67,9 +77,8 @@ export default class Visualize extends Component {
                     <label><strong>Data de atendimento:</strong></label>
                     <input
                         type="date"
-                        name="data_atend"
-                        onChange={this.handleChange}
-                        value={this.state.data_atend}
+                        // onChange={this.handleChange}
+                        ref={this.input}
                     />
 
                     <button type="submit">Atender</button>
