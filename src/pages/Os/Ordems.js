@@ -12,9 +12,10 @@ class Ordems extends Component {
 
     async componentDidMount() {
 
-        const response = await api.get(`/ordems`)
-
+        const response = await api.get(`/ordems`)                  
+        
         this.setState({ ordems: response.data })
+        
 
     }
 
@@ -33,14 +34,14 @@ class Ordems extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {ordems.map(ordem => (
+                        {ordems.map(ordem => ( 
                             <tr key={ordem._id}>
                                 <td>{ordem.equipamento}</td>
                                 <td>{ordem.data}</td>
                                 <td>
                                     <Link to={`/visualize/${ordem._id}`}>Visualizar</Link>
                                 </td>
-                            </tr>
+                            </tr>                            
                         ))}
                     </tbody>
                 </table>
