@@ -6,6 +6,7 @@
     left: 0;
     background: #FFF;
     border-bottom: 1px solid rgb(255, 201, 170);    
+    z-index: 99;
 }
 
 .menu_navigation {
@@ -41,10 +42,25 @@
 
 .menu_navigation_items a {
     color: #000;        
-    text-decoration: none;
+    text-decoration: none;         
 }
 
 .menu_navigation_items a:hover,
 .menu_navigation_items a:active {
-    color: #da552f;
+    color: #bd2a01;
+}
+
+@media (max-width: 768px){
+    .menu_navigation_items {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu_toggle-button {
+        display: none;
+    }
+    .menu_logo {
+        margin-left: 0;
+    }
 }

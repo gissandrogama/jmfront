@@ -3,13 +3,27 @@ import { Link } from 'react-router-dom'
 
 import './SideDrawer.css'
 
-const SideDrawer = props => (
-    <nav className="side-drawer">
-        <ul>
-            <li><Link to={`/`}>Ordem de Serviços</Link></li>
-            <li><Link to={`/new`}>Cadastro</Link></li>
-        </ul>
-    </nav>
-)
+const SideDrawer = props => {
+
+    let drawerClasses = 'side-drawer'
+
+    if (props.show) {
+        drawerClasses = 'side-drawer open'
+    }
+
+    return (
+        <nav className={drawerClasses}>
+            <ul>
+                <li><Link to={`/new`}>Cadastro de OS</Link></li>
+                <li><Link to={`/`}>OS não atendidas</Link></li>
+                <li><Link to={`/`}>OS atendidas</Link></li>
+            </ul>
+            <ul>
+                <li><Link to={`/new`}>Cadastro equipamento</Link></li>
+                <li><Link to={`/`}>Equipamentos</Link></li>                
+            </ul>
+        </nav>
+    )
+}
 
 export default SideDrawer

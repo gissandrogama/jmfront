@@ -10,7 +10,7 @@ const Header = props => {
   return (
     <header className="menu">
       <nav className="menu_navigation">
-        <div>
+        <div className="menu_toggle-button">
           <DrawerToggleButton click={props.drawerClickHandler}/>
         </div>
         <div className="menu_logo"><img src={logo} alt="logo JM Serviços" /></div>
