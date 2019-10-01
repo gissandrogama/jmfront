@@ -1,0 +1,14 @@
+.menu {
+    position: fixed;
+    height: 75px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #FFF;
+    border-bottom: 1px solid rgb(255, 201, 170);
+}
+
+.menu_logo img {
+    max-width: 100%;
+    height: auto;    
+}

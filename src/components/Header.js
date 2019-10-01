@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import './Header.css'
+import './Header2.css'
 import logo from '../assets/logoapp.jpg'
 
 export default function Header() {
   return (
-    <header id="main-header">
+    <header className="menu">
       <nav className="menu_navigation">
         <div></div>
-        <div><img src={logo} alt="logo JM Serviços" /></div>
-        <div>
+        <div className="menu_logo"><img src={logo} alt="logo JM Serviços" /></div>
+        <div className="meu_navigation_items">
           <ul>
             <li><Link to={`/`}>Ordem de Serviços</Link></li>
             <li><Link to={`/new`}>Cadastro</Link></li>
