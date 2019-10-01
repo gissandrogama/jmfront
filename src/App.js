@@ -19,12 +19,19 @@ class App extends Component {
   }
 
   render(){
+    let sideDrawer
+    let backdrop
+
+    if (this.state.sideDrawerOpen){
+      sideDrawer = <SideDrawer />
+      backdrop = <Backdrop />
+    }
     return (
       <BrowserRouter>
       <div style={{height: '100%'}}>      
         <Header />
-        <SideDrawer />
-        <Backdrop />
+        {sideDrawer}
+        {backdrop}
         <main style={{marginTop: '64px'}}>
           <Routes />
         </main>
