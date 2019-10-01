@@ -5,8 +5,13 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     background: #fafafa;
     font: 14px Arial, Helvetica, sans-serif;
     -webkit-font-smoorhing: antialiased !important;
+    height: 100%;
 }
