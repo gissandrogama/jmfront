@@ -1,13 +1,13 @@
 form#new-os {
     width: 100%;
     max-width: 700px;
-    margin: 30px auto 0;
+    margin: 100px auto 0;
     padding: 30px;
     background: #fff;
     border: 1px solid #ddd;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
 }
 
 form#new-os input {

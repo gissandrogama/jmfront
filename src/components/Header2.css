@@ -5,10 +5,42 @@
     top: 0;
     left: 0;
     background: #FFF;
-    border-bottom: 1px solid rgb(255, 201, 170);
+    border-bottom: 1px solid rgb(255, 201, 170);    
+}
+
+.menu_navigation {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 1rem; 
+}
+
+.spacer {
+    flex: 1;
 }
 
 .menu_logo img {
     max-width: 100%;
     height: auto;    
+}
+
+.menu_navigation_items ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu_navigation_items li {
+    padding: 0 0.5rem;
+}
+
+.menu_navigation_items a {
+    color: #000;        
+    text-decoration: none;
+}
+
+.menu_navigation_items a:hover,
+.menu_navigation_items a:active {
+    color: #da552f;
 }
