@@ -12,30 +12,34 @@ class App extends Component {
     sideDrawerOpen: false
   }
 
-  draweToggleClickHandler = () => {
+  drawerToggleClickHandler = () => {
     this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen}
+      return { sideDrawerOpen: !prevState.sideDrawerOpen }
     })
   }
 
-  render(){
+  backdropClickHandler = () => {
+    this.setState({ sideDrawerOpen: false })
+  }
+
+  render() {
     let sideDrawer
     let backdrop
 
-    if (this.state.sideDrawerOpen){
+    if (this.state.sideDrawerOpen) {
       sideDrawer = <SideDrawer />
-      backdrop = <Backdrop />
+      backdrop = <Backdrop click={this.backdropClickHandler} />
     }
     return (
       <BrowserRouter>
-      <div style={{height: '100%'}}>      
-        <Header />
-        {sideDrawer}
-        {backdrop}
-        <main style={{marginTop: '64px'}}>
-          <Routes />
-        </main>
-      </div>
+        <div style={{ height: '100%' }}>
+          <Header drawerClickHandler={this.drawerToggleClickHandler} />
+          {sideDrawer}
+          {backdrop}
+          <main style={{ marginTop: '64px' }}>
+            <Routes />
+          </main>
+        </div>
       </BrowserRouter>
     );
   }

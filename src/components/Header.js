@@ -6,12 +6,12 @@ import DrawerToggleButton from './SideDrawer/DrawerToggleButton'
 import './Header2.css'
 import logo from '../assets/logoapp.jpg'
 
-export default function Header() {
+const Header = props => {
   return (
     <header className="menu">
       <nav className="menu_navigation">
         <div>
-          <DrawerToggleButton />
+          <DrawerToggleButton click={props.drawerClickHandler}/>
         </div>
         <div className="menu_logo"><img src={logo} alt="logo JM Serviços" /></div>
         <div className="spacer" />
@@ -25,3 +25,5 @@ export default function Header() {
     </header>
   )
 }
+
+export default Header
