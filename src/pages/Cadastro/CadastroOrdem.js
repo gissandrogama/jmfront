@@ -32,7 +32,7 @@ class CadOrdem extends Component {
     }
 
     render(){
-        return(
+        return(            
             <form id="new-os" onSubmit={this.handleSubmit}>
                 <input 
                     type="text"
@@ -72,7 +72,7 @@ class CadOrdem extends Component {
                 />
 
                 <button type="submit">Cadastrar</button>
-            </form>
+            </form>            
         )
     }
 }
