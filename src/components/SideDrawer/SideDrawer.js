@@ -15,8 +15,8 @@ const SideDrawer = props => {
         <nav className={drawerClasses}>
             <ul>
                 <li><Link to={`/new`}>Cadastro de OS</Link></li>
-                <li><Link to={`/`}>OS não atendidas</Link></li>
-                <li><Link to={`/`}>OS atendidas</Link></li>
+                <li><Link to={`/ordems/`}>OS não atendidas</Link></li>
+                <li><Link to={`/ordems/`}>OS atendidas</Link></li>
             </ul>
             <ul>
                 <li><Link to={`/new`}>Cadastro equipamento</Link></li>
