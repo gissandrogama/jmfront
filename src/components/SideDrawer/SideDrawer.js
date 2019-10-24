@@ -20,7 +20,7 @@ const SideDrawer = props => {
             </ul>
             <ul>
                 <li><Link to={`/new`}>Cadastro equipamento</Link></li>
-                <li><Link to={`/`}>Equipamentos</Link></li>                
+                <li><Link to={`/lists`}>Equipamentos</Link></li>                
             </ul>
         </nav>
     )
